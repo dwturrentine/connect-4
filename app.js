@@ -13,6 +13,8 @@ for(let i = 0; i < tableCell.length; i++) {
     console.log(`${e.target.parentElement.rowIndex}`, `${e.target.cellIndex}`);
  })
 
+}
+
  // Game Logic //
 
 // Player 1 input and game piece. //
@@ -26,7 +28,7 @@ player1Color = 'red';
 // Player 2 input and game piece. // 
 
 while(!player2) {
-    var player2 = prompt('Player One: Enter your name. You will be blue.');
+    var player2 = prompt('Player Two: Enter your name. You will be blue.');
 }
 
 player2Color = 'blue';
@@ -42,7 +44,7 @@ Array.prototype.forEach.call(tableCell, (cell) => {
     cell.addEventListener('click', changeColor);
     cell.style.backgroundColor = 'white';
     });
-}
+
 
 // Changes color of cell on user click that corresponds to table coordinates. //
 
@@ -123,7 +125,7 @@ function horizontalCheck() {
                     return true;
                 }  
         }
-     }
+    }
 }
 
 // Vertical Check //
@@ -191,11 +193,12 @@ function drawCheck() {
         if(tableCell[i].style.backgroundColor !== 'white') {
             fullSlot.push(tableCell[i]);
         }
+    }
 
         if(fullSlot.length === tableCell.length) {
             return true;
         }
-    }
+}
 }
 
 // Game Reset //
@@ -209,4 +212,5 @@ reset.addEventListener('click', ()=> {
     playerTurn.style.color = 'black';
     return currentPlayer === 1 ? playerTurn.textContent = `${player1}'s turn` : playerTurn.textContent = `${player2}'s turn`;
     });
-}   
+
+
