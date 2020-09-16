@@ -8,7 +8,7 @@ const reset = document.querySelector('.reset');
 
 // Table coordinates to be logged when clicked by players. //
 
-for(let i = 0; i < tableCell.length; i++) {
+for (let i = 0; i < tableCell.length; i++) {
     tableCell[i].addEventListener('click', (e) => {
     console.log(`${e.target.parentElement.rowIndex}`, `${e.target.cellIndex}`);
  })
@@ -17,7 +17,7 @@ for(let i = 0; i < tableCell.length; i++) {
 
 // Player 1 input and game piece. //
 
-while(!player1) {
+while (!player1) {
     var player1 = prompt('Player One: Enter your name. You will be red.');
 }
 
@@ -25,7 +25,7 @@ player1Color = 'red';
 
 // Player 2 input and game piece. // 
 
-while(!player2) {
+while (!player2) {
     var player2 = prompt('Player One: Enter your name. You will be blue.');
 }
 
@@ -91,7 +91,7 @@ function changeColor(e) {
                     playerTurn.textContent = 'Game is a draw!';
                     return alert('DRAW!');
 
-                }else{
+                } else {
 
                 playerTurn.textContent = `${player1}'s turn!`;
                 return currentPlayer = 1;
@@ -105,14 +105,14 @@ function changeColor(e) {
 // Checks the color match for Player Wins. //
 
 function colorMatchCheck(one, two, three, four) {
-    return(one == two && one === three && one === four && one !== 'white');
+    return (one == two && one === three && one === four && one !== 'white');
 }
 
 // Horizontal Check //
 
 function horizontalCheck() {
 
-    for(let row = 0; row < tableRow.length; row++) {
+    for (let row = 0; row < tableRow.length; row++) {
 
         for (let col = 0; col < 4; col++) {
 
