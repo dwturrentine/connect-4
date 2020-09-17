@@ -194,7 +194,6 @@ function drawCheck() {
             fullSlot.push(tableCell[i]);
         }
     }
-
         if(fullSlot.length === tableCell.length) {
             return true;
         }
