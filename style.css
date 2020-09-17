@@ -8,22 +8,27 @@ h1 {
     text-align: center;
 }
 
+h3 {
+    text-align: right;
+    margin: 100px;
+}
+
 .game {
     position: absolute;
     top: 4rem;
     left: 50%;
     transform: translate(-50%);
-    width: 650px;
-    height: 600px;
-    background: rgb(61, 138, 254);
+    width: auto;
+    height: auto;
+    background: rgb(117 208 115);
     border: 1px solid black;
-    box-shadow: 5px 5px rgb(0, 0, 0, 0.441);
+    box-shadow: 10px 10px rgb(0, 0, 0, 0.441);
     padding: 1.5rem;
 }
 
 .slot {
-    width: 90px;
-    height: 90px;
+    width: 50px;
+    height: 50px;
     background: white;
     border: 1px solid black;
     border-radius: 50%;
@@ -31,7 +36,7 @@ h1 {
 
 .reset {
     position: absolute;
-    top: 90vh;
+    top: 70vh;
     left: 50%;
     transform: translate(-50%);
     border: 1px solid black;
